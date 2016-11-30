@@ -1,0 +1,13 @@
+
+<h1><%= @recipe_title %></h1>
+
+Ingredients
+-----------
+<% recipe[:ingredients].each do |ingredient| %>
+  <%=ingredient %>  <% end %>
+
+Directions
+-----------
+<% recipe[:directions].each_with_index do |direction, index| %>
+  <%= index + 1 %>. <%= direction %>
+<% end %>
